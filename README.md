@@ -10,11 +10,12 @@
 ## Pre-requisites:
 - [X] python 3.5 or 3.6
 - [X] dependencies from requirements.txt
+
+## Installing required python dependencies
+- Clone this repository onto your system. 
+- Then, create a virtual environment and install the packages from requirements.txt: 
 <br>
-- Clone this repository onto your system. <br>
-- Then, create a virtual environment and install the packages from requirements.txt: <br>
-<br>
-```bash
+```
 cd path/to/folder
 python -m venv env
 source env/bin/activate
@@ -23,7 +24,7 @@ source env/bin/activate
 ```
 pip install -r requirements.txt
 ```
-<br>
+
 
 ## Directions to run
 - Run the following command in the project directory:
