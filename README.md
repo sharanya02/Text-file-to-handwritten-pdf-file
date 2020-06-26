@@ -13,21 +13,13 @@
 
 ## Installing required python dependencies
 - Clone this repository onto your system. 
-- Then, create a virtual environment and install the packages from requirements.txt: 
-<br>
-```
-cd path/to/folder
-python -m venv env
-source env/bin/activate
-```
-- To install the python dependencies from requirements.txt, run the following command:
-```
-pip install -r requirements.txt
-```
-
+- Then, create a virtual environment and install the packages from requirements.txt.
 
 ## Directions to run
 - Run the following command in the project directory:
 ```
 python txttohandwriting.py
 ```
+
+## Contributors:
+- [Sharanya Mukherjee](https://github.com/sharanya02)
