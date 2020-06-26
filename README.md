@@ -1,5 +1,5 @@
 <p align="center">
-	<h2 align="center"> Text to Handwriting converter </h2>
+	<h1 align="center"> Text to Handwriting converter </h1>
 	<h4 align="center"> Convert text files into handwritten PDFs <h4>
 </p>
 <br>
@@ -13,7 +13,7 @@
 <br>
 Clone this repository onto your system. <br>
 Then, create a virtual environment and install the packages from requirements.txt: <br>
-
+<br>
 ```bash
 cd path/to/folder
 python -m venv env
@@ -22,4 +22,10 @@ source env/bin/activate
 To install the python dependencies from requirements.txt, run the following command:
 ```bash
 pip install -r requirements.txt
+```
+<br>
+## Directions to run
+Run the following command in the project directory:
+```bash
+python txttohandwriting.py
 ```
