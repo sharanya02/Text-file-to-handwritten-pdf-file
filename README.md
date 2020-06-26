@@ -13,3 +13,13 @@
 <br>
 Clone this repository onto your system. <br>
 Then, create a virtual environment and install the packages from requirements.txt: <br>
+
+```bash
+cd path/to/folder
+python -m venv env
+source env/bin/activate
+```
+To install the python dependencies from requirements.txt, run the following command:
+```bash
+pip install -r requirements.txt
+```
