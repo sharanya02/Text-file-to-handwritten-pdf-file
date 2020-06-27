@@ -1,5 +1,5 @@
 from PIL import Image
-BG = Image.open("bg.png")
+BG = Image.open("myfont/bg.png")
 sizeOfSheet =BG.width
 gap, _  = 0,0
 allowedChars = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM,.-?!() 1234567890'
@@ -9,7 +9,7 @@ def writee(char):
         pass
     else:
         char.lower()
-        cases = Image.open("%s.png"%char)
+        cases = Image.open("myfont/%s.png"%char)
         BG.paste(cases, (gap, _))
         size = cases.width
         gap += size
@@ -38,7 +38,7 @@ def letterwrite(word):
             elif letter == '(':
                 letter = 'braketop'
             elif letter == ')':
-                letter = 'braketclose'
+                letter = 'braketcl'
             elif letter == '-':
                 letter = 'hiphen'
             writee(letter)
@@ -59,8 +59,8 @@ if __name__ == '__main__':
         for i in range(0,len(p)):
             worddd(p[i])
             writee('\n')
-            BG.save('%doutt.png'%i)
-            BG1= Image.open("bg.png")
+            BG.save('myfont/%doutt.png'%i)
+            BG1= Image.open("myfont/bg.png")
             BG=BG1
             gap = 0
             _ =0
@@ -70,7 +70,7 @@ from fpdf import FPDF
 from PIL import Image
 imagelist=[]
 for i in range(0,len(p)):
-    imagelist.append('%doutt.png'%i)
+    imagelist.append('myfont/%doutt.png'%i)
 cover = Image.open(imagelist[0])
 width, height = cover.size
 pdf = FPDF(unit = "pt", format = [width, height])
