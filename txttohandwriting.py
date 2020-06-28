@@ -60,21 +60,26 @@ if __name__ == '__main__':
             worddd(p[i])
             writee('\n')
             BG.save('%doutt.png'%i)
-            BG1= Image.open("bg.png")
+            BG1= Image.open("myfont/bg.png")
             BG=BG1
             gap = 0
             _ =0
     except ValueError as E:
         print("{}\nTry again".format(E))
+
 from fpdf import FPDF
 from PIL import Image
+
 imagelist=[]
 for i in range(0,len(p)):
     imagelist.append('%doutt.png'%i)
-cover = Image.open(imagelist[0])
-width, height = cover.size
-pdf = FPDF(unit = "pt", format = [width, height])
-for i in range(0,len(imagelist)):
-    pdf.add_page()
-    pdf.image(imagelist[i], 0, 0)
-pdf.output("newww.pdf", "F")
+
+#Converting images to pdf
+#Source:https://datatofish.com/images-to-pdf-python/
+
+#Now I am opening each images 
+for PNG_FILE in imagelist:
+    rgba = Image.open(PNG_FILE)
+    rgb = Image.new('RGB', rgba.size, (255, 255, 255))  # white background
+    rgb.paste(rgba, mask=rgba.split()[3])               # paste using alpha channel as mask
+    rgb.save('final_output.pdf', append=True)  #Now save multiple images in same pdf file
