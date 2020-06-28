@@ -38,7 +38,7 @@ def letterwrite(word):
             elif letter == '(':
                 letter = 'braketop'
             elif letter == ')':
-                letter = 'braketclose'
+                letter = 'braketcl'
             elif letter == '-':
                 letter = 'hiphen'
             writee(letter)
