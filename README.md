@@ -7,9 +7,9 @@
 ## Functionalities
 - [X] Convert a text document (.txt file) into a PDF file with the text content handwritten
 
-## Pre-requisites:
-- [X] python 3.5 or 3.6
-- [X] dependencies from requirements.txt
+## Pre-requisites
+- [X] Python 3.5 or 3.6 o 3.8
+- [X] Dependencies from `requirements.txt`
 
 ## Installing required python dependencies
 - Clone this repository onto your system. 
@@ -21,5 +21,5 @@
 python txttohandwriting.py
 ```
 
-## Contributors:
+## Contributors
 - [Sharanya Mukherjee](https://github.com/sharanya02)
