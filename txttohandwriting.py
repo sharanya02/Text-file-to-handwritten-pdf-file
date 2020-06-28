@@ -1,5 +1,5 @@
 from PIL import Image
-BG = Image.open("bg.png")
+BG = Image.open("c:/Users/shara/myfont/bg.png")
 sizeOfSheet =BG.width
 gap, _  = 0,0
 allowedChars = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM,.-?!() 1234567890'
@@ -9,7 +9,7 @@ def writee(char):
         pass
     else:
         char.lower()
-        cases = Image.open("%s.png"%char)
+        cases = Image.open("c:/Users/shara/myfont/%s.png"%char)
         BG.paste(cases, (gap, _))
         size = cases.width
         gap += size
