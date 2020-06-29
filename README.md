@@ -14,7 +14,6 @@
 
 ```
  $ pip install requirements.txt
- 
  ```
 
 ## Installing required python dependencies
