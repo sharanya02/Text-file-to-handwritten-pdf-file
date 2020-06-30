@@ -1,3 +1,6 @@
+# Usage
+# python ScannedImages-to-PDF.py -i image_path
+
 from PIL import Image
 import pytesseract
 import argparse
