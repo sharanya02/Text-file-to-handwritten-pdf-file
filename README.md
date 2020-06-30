@@ -17,13 +17,20 @@
  ```
 
 ## Installing required python dependencies
-- Clone this repository onto your system. 
+- Clone this repository onto your system
+```bash
+git clone https://github.com/sharanya02/Text-file-to-handwritten-pdf-file
+```
 - Then, create a virtual environment and install the packages from requirements.txt.
-
+```bash
+pip install virtualenv
+virtualenv env
+source env/bin/activate
+pip install -r requirements.txt
+```
 ## Directions to run
 - Run the following command in the project directory:
 ```
 python txttohandwriting.py
 ```
-
 
