@@ -1,2 +1,5 @@
-Pillow
-fpdf
+fpdf==1.7.2
+numpy==1.19.0
+opencv-python==4.2.0.34
+Pillow==7.1.2
+pytesseract==0.3.4
