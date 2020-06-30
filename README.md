@@ -9,7 +9,12 @@
 
 ## Pre-requisites:
 - [X] python 3.5 or 3.6
+- [X] [Install Tesseract: an open source text recognition (OCR) Engine](https://github.com/tesseract-ocr/tessdoc/blob/master/Home.md)
 - [X] dependencies from requirements.txt
+
+```
+ $ pip install requirements.txt
+ ```
 
 ## Installing required python dependencies
 - Clone this repository onto your system. 
