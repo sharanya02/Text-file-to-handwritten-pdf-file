@@ -90,10 +90,16 @@ for i in range(0, len(p)):
 #Converting images to pdf
 #Source:https://datatofish.com/images-to-pdf-python/
 
-#Now I am opening each images
-for PNG_FILE in imagelist:
+def pdf_creation(PNG_FILE,flag=False):
     rgba = Image.open(PNG_FILE)
     rgb = Image.new('RGB', rgba.size, (255, 255, 255))  # white background
-    rgb.paste(rgba, mask=rgba.split()[3])  # paste using alpha channel as mask
-    rgb.save('final_output.pdf',
-             append=True)  #Now save multiple images in same pdf file
+    rgb.paste(rgba, mask=rgba.split()[3])               # paste using alpha channel as mask
+    rgb.save('final_output.pdf', append=flag)  #Now save multiple images in same pdf file
+
+#First create a pdf file if not created
+pdf_creation(imagelist.pop(0))
+
+#Now I am opening each images and converting them to pdf 
+#Appending them to pdfs
+for PNG_FILE in imagelist:
+    pdf_creation(PNG_FILE,flag=True)
