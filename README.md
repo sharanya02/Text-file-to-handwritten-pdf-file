@@ -29,7 +29,7 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 ## Directions to run
-- Run the following command in the project directory:
+- Run the following command in the project directory:-
 ```
 python txttohandwriting.py
 ```
