@@ -36,4 +36,4 @@ $ python txttohandwriting.py
 
 ## Demo
 
-<p align="center"><img src="0outt.png"> <img src="1outt.png"></p>
+<p align="center"><img width="50%" height="50%" src="0outt.png">    <img width="50%" height="50%" src="1outt.png"></p>
