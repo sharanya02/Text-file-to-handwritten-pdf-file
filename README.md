@@ -24,7 +24,6 @@ $ git clone https://github.com/sharanya02/Text-file-to-handwritten-pdf-file
 - Then, create a virtual environment and install the packages from requirements.txt.
 ```bash
 $ python3 -m venv env
-$ virtualenv env
 $ source env/bin/activate
 $ pip install -r requirements.txt
 ```
