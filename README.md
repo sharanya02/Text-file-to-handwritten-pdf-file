@@ -13,7 +13,7 @@
 - [X] dependencies from requirements.txt
 
 ```
- $ pip install requirements.txt
+ $ pip install -r requirements.txt
  ```
 
 ## Installing required python dependencies
