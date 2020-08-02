@@ -7,19 +7,13 @@ sizeOfSheet = BG.width
 gap, _ = 0, 0
 allowedChars = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM,.-?!() 1234567890'
 
-
 def writee(char):
     global gap, _
-    if char == '\n':
-        pass
-    else:
-        char.lower()
-        cases = Image.open("myfont/%s.png" % char)
+    if char != '\n':
+        cases = Image.open("myfont/%s.png" % char.lower())
         BG.paste(cases, (gap, _))
         size = cases.width
         gap += size
-        del cases
-
 
 def letterwrite(word):
     global gap, _
