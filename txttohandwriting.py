@@ -20,6 +20,7 @@ def letterwrite(word):
     if gap > sizeOfSheet - 95 * (len(word)):
         gap = 0
         _ += 200
+    special_char = {'.':'fullstop','!':'exclamation','?':'question',',':'comma','(':'braketop', ')':'braketcl','-':'hiphen'}
     for letter in word:
         if letter in allowedChars:
             if letter.islower():
@@ -27,20 +28,8 @@ def letterwrite(word):
             elif letter.isupper():
                 letter = letter.lower()
                 letter += 'upper'
-            elif letter == '.':
-                letter = "fullstop"
-            elif letter == '!':
-                letter = 'exclamation'
-            elif letter == '?':
-                letter = 'question'
-            elif letter == ',':
-                letter = 'comma'
-            elif letter == '(':
-                letter = 'braketop'
-            elif letter == ')':
-                letter = 'braketcl'
-            elif letter == '-':
-                letter = 'hiphen'
+            elif special_char[letter] != None:
+                letter = special_char[letter]
             writee(letter)
 
 
