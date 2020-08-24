@@ -7,25 +7,20 @@ sizeOfSheet = BG.width
 gap, _ = 0, 0
 allowedChars = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM,.-?!() 1234567890'
 
-
 def writee(char):
     global gap, _
-    if char == '\n':
-        pass
-    else:
-        char.lower()
-        cases = Image.open("myfont/%s.png" % char)
+    if char != '\n':
+        cases = Image.open("myfont/%s.png" % char.lower())
         BG.paste(cases, (gap, _))
         size = cases.width
         gap += size
-        del cases
-
 
 def letterwrite(word):
     global gap, _
     if gap > sizeOfSheet - 95 * (len(word)):
         gap = 0
         _ += 200
+    special_char = {'.':'fullstop','!':'exclamation','?':'question',',':'comma','(':'braketop', ')':'braketcl','-':'hiphen'}
     for letter in word:
         if letter in allowedChars:
             if letter.islower():
@@ -33,20 +28,8 @@ def letterwrite(word):
             elif letter.isupper():
                 letter = letter.lower()
                 letter += 'upper'
-            elif letter == '.':
-                letter = "fullstop"
-            elif letter == '!':
-                letter = 'exclamation'
-            elif letter == '?':
-                letter = 'question'
-            elif letter == ',':
-                letter = 'comma'
-            elif letter == '(':
-                letter = 'braketop'
-            elif letter == ')':
-                letter = 'braketcl'
-            elif letter == '-':
-                letter = 'hiphen'
+            elif special_char[letter] != None:
+                letter = special_char[letter]
             writee(letter)
 
 
