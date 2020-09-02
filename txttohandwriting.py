@@ -14,6 +14,9 @@ def writee(char):
         BG.paste(cases, (gap, _))
         size = cases.width
         gap += size
+    else:
+        gap=0
+        _+=200
 
 def letterwrite(word):
     global gap, _
@@ -28,9 +31,16 @@ def letterwrite(word):
             elif letter.isupper():
                 letter = letter.lower()
                 letter += 'upper'
-            elif special_char[letter] != None:
-                letter = special_char[letter]
+            else:
+                try:
+                    if special_char[letter] != None:
+                        letter = special_char[letter]
+                except:
+                    pass
             writee(letter)
+        else:
+            gap=0
+            _+=200
 
 
 def worddd(Input):
