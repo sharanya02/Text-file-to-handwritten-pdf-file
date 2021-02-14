@@ -1,6 +1,6 @@
 <p align="center">
 	<h1 align="center"> Text to Handwriting converter </h1>
-	<h4 align="center"> Convert text files into handwritten PDFs <h4>
+	<h4 align="center"> Convert text files into handwritten PDF <h4>
 </p>
 <br>
 
